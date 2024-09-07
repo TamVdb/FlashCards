@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcards App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="flashcard">
+            <div id="question">Cliquez sur "Nouvelle question" pour commencer !</div>
+            <div id="answer" style="display:none;"></div>
+        </div>
+        <button id="showAnswerBtn">Afficher la réponse</button>
+        <button id="newQuestionBtn">Nouvelle question</button>
+        <div id="ratingButtons" style="display:none;">
+            <p>Notez votre réponse :</p>
+            <button class="rateBtn" data-rating="1">1 : raté</button>
+            <button class="rateBtn" data-rating="2">2 : presque</button>
+            <button class="rateBtn" data-rating="3">3 : parfait</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

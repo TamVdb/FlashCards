@@ -1,0 +1,162 @@
+[
+    {
+        "question": "Qu'est-ce que le C# ?",
+        "answer": "C# est un langage de programmation orienté objet développé par Microsoft pour la plateforme .NET. Il est conçu pour être simple, moderne et sécurisé, avec une syntaxe qui combine des éléments de C++ et de Java.",
+        "weight": 50
+    },
+    {
+        "question": "Quelle est la différence entre == et Equals() ?",
+        "answer": "== compare les références des objets pour les types de référence (pour vérifier si deux références pointent vers le même objet en mémoire). Pour les types de valeur, il compare les valeurs. Equals() est une méthode définie dans la classe de base Object que les classes peuvent redéfinir pour comparer les valeurs des objets selon leur propre logique.",
+        "weight": 50
+    },
+    {
+        "question": "Quelle est la différence entre une struct et une class ?",
+        "answer": "Une struct est un type de valeur et est stockée sur la pile (stack). Elle est généralement utilisée pour des données petites et immuables. Une class est un type de référence et est stockée sur le tas (heap). Les instances des classes sont accessibles via des références et supportent l'héritage, l'encapsulation, et le polymorphisme.",
+        "weight": 50
+    },
+    {
+        "question": "Qu'est-ce que l'héritage en csharp ?",
+        "answer": "L'héritage permet à une classe de dériver d'une autre classe, acquérant ainsi tous ses membres (propriétés, méthodes) tout en permettant à la classe dérivée de définir ses propres membres et d'ajouter ou de modifier le comportement hérité.",
+        "weight": 50
+    },
+    {
+        "question": "Qu'est-ce qu'un namespace en csharp ?",
+        "answer": "Un namespace est un conteneur qui organise les classes, interfaces, structures et autres types de données en groupes logiques pour éviter les conflits de noms et améliorer la lisibilité du code.",
+        "weight": 50
+    },
+    {
+        "question": "Que sont les types de valeur et les types de référence en C# ?",
+        "answer": "Les types de valeur (comme int, float, bool, struct) sont stockés directement dans la variable et ont une copie distincte lorsqu'ils sont assignés à une nouvelle variable. Les types de référence (comme class, string, array) stockent une référence à la localisation de l'objet en mémoire. Lorsque ces types sont assignés à une nouvelle variable, la référence est copiée, mais les objets eux-mêmes sont partagés.",
+        "weight": 50
+    },
+    {
+        "question": "Qu'est-ce que le mot-clé static en C# ?",
+        "answer": "Le mot-clé static est utilisé pour déclarer des membres qui appartiennent à la classe elle-même plutôt qu'aux instances de la classe. Les membres static peuvent être accédés sans créer une instance de la classe.",
+        "weight": 50
+    },
+    {
+        "question": "Explique le concept de polymorphisme.",
+        "answer": "Le polymorphisme permet aux méthodes de se comporter différemment en fonction du type d'objet qui les appelle. En C#, le polymorphisme est généralement implémenté via l'héritage et les méthodes virtuelles ou abstraites.",
+        "weight": 50
+    },
+    {
+        "question": "Qu'est-ce que l'encapsulation en csharp ?",
+        "answer": "L'encapsulation est le principe de cacher les détails internes d'un objet et d'exposer uniquement les opérations nécessaires. En C#, cela est réalisé à l'aide de modificateurs d'accès (private, protected, public) pour contrôler la visibilité des membres de la classe.",
+        "weight": 50
+    },
+    {
+        "question": "Qu'est-ce qu'une interface ?",
+        "answer": "Une interface est un contrat qui définit un ensemble de méthodes que les classes doivent implémenter. Elle ne fournit pas de mise en œuvre pour les méthodes, mais garantit que toutes les classes qui implémentent l'interface fourniront une implémentation pour ces méthodes.",
+        "weight": 50
+    },
+    {
+        "question": "Qu'est-ce qu'un constructeur ?",
+        "answer": "Un constructeur est une méthode spéciale d'une classe qui est appelée lors de la création d'une instance de la classe. Il est utilisé pour initialiser les objets de la classe.",
+        "weight": 50
+    },
+    {
+        "question": "Quelle est la différence entre un constructeur par défaut et un constructeur paramétré ?",
+        "answer": "Un constructeur par défaut est un constructeur sans paramètres, qui est automatiquement fourni par le compilateur si aucun constructeur n'est défini par l'utilisateur. Un constructeur paramétré prend un ou plusieurs arguments et permet d'initialiser les membres de la classe avec des valeurs spécifiques lors de la création de l'objet.",
+        "weight": 50
+    },
+    {
+        "question": "Comment fonctionne la gestion de la mémoire en csharp ?",
+        "answer": "C# utilise un ramasse-miettes (garbage collector) pour gérer la mémoire automatiquement. Il libère la mémoire des objets qui ne sont plus utilisés, réduisant ainsi les fuites de mémoire.",
+        "weight": 50
+    },
+    {
+        "question": "Qu'est-ce que le ramasse-miettes (garbage collector) ?",
+        "answer": "Le ramasse-miettes est un processus qui gère la libération de la mémoire des objets qui ne sont plus accessibles ou utilisés. Il fonctionne en identifiant les objets non référencés et en libérant la mémoire qu'ils occupent.",
+        "weight": 50
+    },
+    {
+        "question": "Qu'est-ce que le concept de 'dispose' et comment l'utiliser en csharp ?",
+        "answer": "Dispose est une méthode définie par l'interface IDisposable. Elle est utilisée pour libérer explicitement les ressources non managées (comme les fichiers, les connexions réseau) lorsque les objets ne sont plus nécessaires. Les objets qui utilisent des ressources non managées doivent appeler Dispose pour éviter les fuites de ressources.",
+        "weight": 50
+    },
+    {
+        "question": "Qu'est-ce qu'une fuite de mémoire et comment peut-on l'éviter ?",
+        "answer": "Une fuite de mémoire se produit lorsque la mémoire est allouée mais non libérée, ce qui entraîne une consommation excessive de mémoire. En C#, les fuites de mémoire peuvent être évitées en s'assurant que les objets non nécessaires sont correctement éligibles pour le ramasse-miettes et en appelant Dispose pour les ressources non managées.",
+        "weight": 50
+    },
+    {
+        "question": "Qu'est-ce que LINQ ?",
+        "answer": "LINQ (Language Integrated Query) est une fonctionnalité de C# qui permet de faire des requêtes sur des collections de données en utilisant une syntaxe déclarative similaire à SQL. Il facilite la manipulation des données en mémoire, des bases de données et d'autres sources de données.",
+        "weight": 50
+    },
+    {
+        "question": "Comment gérer les exceptions en C# ?",
+        "answer": "Les exceptions en C# sont gérées à l'aide des blocs try, catch, et finally. Le code à risque est placé dans le bloc try, les exceptions sont attrapées dans le bloc catch, et le code de nettoyage ou de déblocage est placé dans le bloc finally, qui est toujours exécuté, qu'une exception soit levée ou non.",
+        "weight": 50
+    },
+    {
+        "question": "Comment créer des exceptions personnalisées en C# ?",
+        "answer": "Pour créer des exceptions personnalisées, il faut définir une nouvelle classe qui hérite de la classe Exception. Il est recommandé de fournir des constructeurs pour initialiser les détails de l'exception.",
+        "weight": 50
+    },
+    {
+        "question": "Qu'est-ce qu'un delegate ?",
+        "answer": "Un delegate est un type qui représente une méthode avec une signature spécifique. Il permet de passer des méthodes comme arguments à d'autres méthodes et est souvent utilisé pour les événements et les callbacks.",
+        "weight": 50
+    },
+    {
+        "question": "Qu'est-ce qu'un event et comment le gérer ?",
+        "answer": "Un event est une forme de delegate qui permet aux objets d'être notifiés lorsqu'un événement se produit. Les abonnés peuvent s'abonner ou se désabonner de l'événement pour recevoir des notifications.",
+        "weight": 50
+    },
+    {
+        "question": "Qu'est-ce que le principe de SOLID en programmation ?",
+        "answer": "SOLID est un acronyme pour cinq principes de conception orientée objet : S : Single Responsibility Principle (SRP) - Une classe ne devrait avoir qu'une seule raison de changer. O : Open/Closed Principle (OCP) - Les entités logicielles doivent être ouvertes à l'extension mais fermées à la modification. L : Liskov Substitution Principle (LSP) - Les objets d'une classe dérivée doivent pouvoir remplacer les objets de la classe de base sans altérer la fonctionnalité. I : Interface Segregation Principle (ISP) - Les clients ne doivent pas être forcés d'implémenter des interfaces qu'ils n'utilisent pas. D : Dependency Inversion Principle (DIP) - Les modules de haut niveau ne doivent pas dépendre de modules de bas niveau. Les deux doivent dépendre d'abstractions.",
+        "weight": 50
+    },
+    {
+        "question": " Qu'est-ce que le boxing et le unboxing en C# ",
+        "answer": "Boxing : Conversion d'une valeur de type valeur (comme int) en type référence (comme object), ce qui crée une nouvelle instance d'objet sur le tas. Unboxing : Conversion d'un type référence en type valeur, ce qui extrait la valeur de l'objet boxé.",
+        "weight": 50
+    },
+    {
+        "question": "Qu'est-ce que le profiling et comment l'utiliser en C# ",
+        "answer": "Le profiling est l'analyse des performances d'une application pour identifier les goulots d'étranglement et les problèmes de performance. Visual Studio propose des outils de profiling intégrés pour analyser l'utilisation du CPU, de la mémoire, et des temps d'exécution des méthodes.",
+        "weight": 50
+    },
+    {
+        "question": "Quelle est la différence entre ref et out en C# ?",
+        "answer": "ref : Le paramètre doit être initialisé avant d'être passé à la méthode et peut être modifié par la méthode. out : Le paramètre n'a pas besoin d'être initialisé avant d'être passé à la méthode, mais doit être assigné dans la méthode avant qu'elle ne se termine.",
+        "weight": 50
+    },
+    {
+        "question": " Qu'est-ce que l'opérateur ?? en C# et comment l'utiliser ?",
+        "answer": "L'opérateur de coalescence nulle (??) fournit une valeur par défaut lorsque une expression est nulle. string displayName = name ?? 'Default Name'; // Renvoie 'Default Name'",
+        "weight": 50
+    },
+    {
+        "question": "Quelle est la différence entre une classe abstraite et une interface en C# ?",
+        "answer": "Classe abstraite : Peut contenir des méthodes implémentées ainsi que des méthodes abstraites que les classes dérivées doivent implémenter. Interface : Ne peut contenir que des signatures de méthodes (et des propriétés) sans implémentation. Les classes implémentent les méthodes de l'interface.",
+        "weight": 50
+    },
+    {
+        "question": "Qu'est-ce que l'overloading et l'overriding en C# ?",
+        "answer": "Overloading (surcharge) : Permet de définir plusieurs méthodes avec le même nom mais des signatures différentes dans une classe. Overriding (redéfini) : Permet de redéfinir une méthode héritée d'une classe de base dans une classe dérivée en utilisant le mot-clé override.",
+        "weight": 50
+    },
+    {
+        "question": "Comment fonctionne l'opérateur is en C# ?",
+        "answer": "L'opérateur is est utilisé pour vérifier si un objet est d'un certain type  : if (obj is string) {}",
+        "weight": 50
+    },
+    {
+        "question": "Quelle est la convention de nommage des méthodes en C# ?",
+        "answer": "Les méthodes doivent être nommées en utilisant le PascalCase, où chaque mot commence par une majuscule ",
+        "weight": 50
+    },
+    {
+        "question": "Qu'est-ce qu'une interpolation de chaine en csharp ?",
+        "answer": "C'est lorsqu'on utilise la signature qui permet d'insérer des variables sans avoir besoin de concaténer : $\"Name : {name}\"",
+        "weight": 50
+    },
+    {
+        "question": " Quelle est la différence entre public, private, protected, et internal en C# ?",
+        "answer": "public rend les membres accessibles depuis n'importe où, private limite l'accès aux membres de la même classe, protected permet l'accès aux classes dérivées, et internal rend les membres accessibles uniquement dans le même assembly.",
+        "weight": 50
+    }
+]
