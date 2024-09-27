@@ -1,0 +1,346 @@
+@font-face {
+   font-family: 'Ubuntu';
+   src: url('./../fonts/Ubuntu-Bold.ttf');
+}
+
+@font-face {
+   font-family: 'Open Sans';
+   src: url('./../fonts/OpenSans-VariableFont.ttf');
+}
+
+:root[data-theme='light'] {
+   --page-bg: #f7f7f8;
+   --dark-bg: #373F47;
+
+   --switch-bg: #42505c;
+   --switch-circle-bg: #ffd371;
+   --switch-circle-pos: 4px;
+   --icon-sun: #ca9104;
+   --icon-moon: #b7b5c4;
+
+   --flashcard-bg: #ffffff;
+   --flashcard-question: #373F47;
+   --flashcard-text: #42505c;
+
+   --copyrights-border: rgba(184, 185, 193, 0.5);
+}
+
+:root[data-theme='dark'] {
+   --page-bg: #373F47;
+   --dark-bg: #20262c;
+
+   --flashcard-bg: #f7f7f8;
+   --flashcard-question: #373F47;
+   --flashcard-text: #42505c;
+
+   --switch-bg: #3b454f;
+   --switch-circle-bg: #6f9ceb;
+   --switch-circle-pos: 42px;
+   --icon-moon: #dee8fb;
+   --icon-sun: #706e89;
+
+   --copyrights-border: rgba(29, 28, 35, 0.5);
+}
+
+:root {
+   --primary: #00ffcd;
+   --default-transition: all 0.3s ease-in-out;
+
+   --btn-primary-bg: var(--primary);
+   --btn-primary-text: #f7f7f8;
+   --btn-primary-border: 2px solid var(--primary);
+   --btn-primary-hover-bg: #3c3a47;
+}
+
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+}
+
+a {
+   text-decoration: none;
+}
+
+ul {
+   list-style-type: none;
+}
+
+img {
+   display: block;
+   max-width: 100%;
+}
+
+body {
+   font-size: 1rem;
+   font-family: 'Open Sans', sans-serif;
+   line-height: 1.3;
+   width: 100%;
+   height: 100%;
+   background-color: var(--page-bg);
+   color: var(--text);
+   transition: var(--default-transition);
+
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+}
+
+h1 {
+   font-family: 'Ubuntu', sans-serif;
+   color: var(--primary);
+   font-size: 3rem;
+   line-height: 1.1;
+}
+
+h2 {
+   font-family: 'Ubuntu';
+   color: var(--title);
+   font-size: 2rem;
+   line-height: 1.1;
+}
+
+
+@media only screen and (max-width: 1024px) {
+   h1 {
+      font-size: 2.8rem;
+   }
+}
+
+@media only screen and (max-width: 768px) {
+   h1 {
+      font-size: 2.5rem;
+   }
+}
+
+@media only screen and (max-width: 600px) {
+   h1 {
+      font-size: 2rem;
+   }
+}
+
+/* =================================================================================================
+Main container
+================================================================================================== */
+main {
+   width: 100%;
+   padding: 3rem 0;
+
+   display: flex;
+   flex-direction: column;
+
+   .main__container {
+      width: 90%;
+      max-width: 1280px;
+      margin: auto;
+   }
+
+   .flashcard__card {
+      width: 100%;
+      max-width: 400px;
+      margin: auto;
+      background-color: var(--flashcard-bg);
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 255, 205, 0.5);
+      border: 1px solid var(--primary);
+
+      .flashcard__question {
+         color: var(--flashcard-question);
+         font-size: 1.1rem;
+         font-weight: 600;
+         margin-bottom: 1rem;
+         padding: 2ch;
+         background-color: var(--primary);
+         border-top-left-radius: 10px;
+         border-top-right-radius: 10px;
+      }
+   }
+}
+
+/* =================================================================================================
+Buttons
+================================================================================================== */
+.btn-primary {
+   margin-top: 1rem;
+   background-color: var(--btn-primary-bg);
+   padding: 0.5rem 0.75rem;
+   border-radius: var(--default-border-radius);
+   transition: var(--default-transition);
+   border: var(--btn-primary-border);
+   cursor: pointer;
+   width: auto;
+   text-align: center;
+
+   /* align-self: flex-start; */
+   &:hover {
+      background-color: var(--btn-primary-hover-bg);
+   }
+
+   a {
+      color: var(--btn-primary-text);
+      font-weight: 400;
+      font-size: 1rem;
+   }
+}
+
+/* =================================================================================================
+Header
+================================================================================================== */
+header {
+   width: 100%;
+   background-color: var(--dark-bg);
+   padding: 1rem 0;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   .header {
+      width: 90%;
+      max-width: 1280px;
+
+      display: flex;
+      align-items: center;
+
+      .header__title {
+         display: flex;
+         flex: 1;
+      }
+
+      .header__theme-switcher {
+         max-height: 40px;
+         background-color: var(--switch-bg);
+         border-radius: 50px;
+         cursor: pointer;
+         padding: 0.5rem;
+         position: relative;
+         transition: var(--default-transition);
+
+         display: flex;
+         justify-content: flex-end;
+         align-items: center;
+         gap: 1rem;
+
+         &::before {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: var(--switch-circle-bg);
+            border-radius: 50px;
+            z-index: 0;
+            left: 0;
+            transform: translateX(var(--switch-circle-pos));
+         }
+
+         svg {
+            z-index: 1;
+         }
+
+         #icon-sun {
+            fill: var(--icon-sun);
+         }
+
+         #icon-moon {
+            fill: var(--icon-moon);
+         }
+      }
+   }
+}
+
+
+/* Media Queries - Header */
+@media only screen and (max-width: 1024px) {}
+
+@media only screen and (max-width: 768px) {}
+
+@media only screen and (max-width: 600px) {}
+
+/*=================================================================================================
+Main
+==================================================================================================*/
+main {
+   display: flex;
+   flex-grow: 1;
+}
+
+/* Media Queries - Main */
+@media only screen and (max-width: 1024px) {}
+
+@media only screen and (max-width: 768px) {}
+
+@media only screen and (max-width: 600px) {}
+
+/*=================================================================================================
+Footer
+==================================================================================================*/
+footer {
+   width: 100%;
+
+   .copyrights {
+      background-color: var(--dark-bg);
+      width: 100%;
+      margin: auto;
+      position: relative;
+      border-top: 1px dotted var(--copyrights-border);
+      margin-top: 1.5rem;
+
+      .copyrights__container {
+         width: 90%;
+         max-width: 1280px;
+         margin: auto;
+         padding: 0.5rem 0;
+
+         display: flex;
+         justify-content: center;
+
+         p {
+            color: #eeedf1;
+            padding: 0.5rem 0;
+            font-weight: 300;
+            font-size: 0.9rem;
+         }
+      }
+   }
+}
+
+/* Media Queries - Footer */
+@media only screen and (max-width: 1024px) {}
+
+@media only screen and (max-width: 768px) {}
+
+@media only screen and (max-width: 600px) {}
+
+
+/* .container {
+   text-align: center;
+   padding: 20px;
+   border: 1px solid #ddd;
+   background-color: #fff;
+   border-radius: 8px;
+   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#flashcard {
+   margin-bottom: 20px;
+   font-size: 20px;
+}
+
+button {
+   padding: 10px 20px;
+   margin: 5px;
+   cursor: pointer;
+   border: none;
+   background-color: #007bff;
+   color: white;
+   border-radius: 5px;
+}
+
+button:hover {
+   background-color: #0056b3;
+}  */
